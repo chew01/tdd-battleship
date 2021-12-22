@@ -1,11 +1,11 @@
-import { Ship, Gameboard } from './index';
+import { Ship, Gameboard, Player } from './index';
 
 test('ship factory creates an object with length property', () => {
   const testShip = Ship(4);
   expect(testShip.length).toBe(4);
 });
 
-test('ship factory creates an object with working hit function and sunk function', () => {
+test('ship factory creates an object with hit function and sunk function', () => {
   const testShip = Ship(4);
   expect(typeof testShip.hit).toBe('function');
 
@@ -62,4 +62,21 @@ test('isAllSunk function returns false when only some ships are sunk', () => {
   gameboard.placeShip(1, 4, 1, 'vertical');
 
   expect(gameboard.isAllSunk()).toBe(false);
+});
+
+test('when player 1 calls attack function, player 2 receives attack', () => {
+  const players = Player();
+
+  players.Player2.receiveAttack = jest.fn();
+  players.attack(2, 3); // attack from player 1
+  expect(players.Player2.receiveAttack).toHaveBeenCalledWith(2, 3);
+});
+
+test('computer auto-attacks after player 1 plays', () => {
+  const players = Player();
+
+  players.Player1.receiveAttack = jest.fn();
+  players.attack(2, 3); // switches to player 2
+
+  expect(players.Player1.receiveAttack).toHaveBeenCalled();
 });
