@@ -13,6 +13,11 @@ const displayFirstGameboard = (game) => {
       player1.appendChild(grid);
     }
   }
+
+  const boardDescription = document.createElement('span');
+  boardDescription.classList.add('description');
+  boardDescription.textContent = 'Player 1';
+  player1.appendChild(boardDescription);
 };
 
 const displaySecondGameboard = (game) => {
@@ -28,6 +33,11 @@ const displaySecondGameboard = (game) => {
       player2.appendChild(grid);
     }
   }
+
+  const boardDescription = document.createElement('span');
+  boardDescription.classList.add('description');
+  boardDescription.textContent = 'Player 2';
+  player2.appendChild(boardDescription);
 };
 
 const updateBoard = (gameboard, player) => {

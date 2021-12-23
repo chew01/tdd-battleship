@@ -1,6 +1,11 @@
 @font-face {
-  font-family: 'Arbutus';
-  src: url('./Arbutus-Regular.ttf');
+  font-family: 'BungeeShade';
+  src: url('./BungeeShade-Regular.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('./FredokaOne-Regular.ttf');
   font-style: normal;
 }
 
@@ -14,9 +19,9 @@ body {
 
 .display {
   background: lightcyan;
-  height: 100%;
   flex: 1;
   text-align: center;
+  padding: 5px;
 }
 
 .display div {
@@ -24,8 +29,8 @@ body {
 }
 
 #title {
-  font-family: 'Arbutus';
-  font-size: 50px;
+  font-family: 'BungeeShade';
+  font-size: 48px;
 }
 
 #turn,
@@ -56,4 +61,13 @@ body {
 
 .grid:active {
   background-color: lightskyblue;
+}
+
+.description {
+  grid-column: 1 / 11;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'FredokaOne';
 }
