@@ -1,15 +1,15 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require("path");
+const path = require('path');
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV == 'production';
 
-const stylesHandler = "style-loader";
+const stylesHandler = 'style-loader';
 
 const config = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     // Add your plugins here
@@ -19,15 +19,15 @@ const config = {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, "css-loader"],
+        use: [stylesHandler, 'css-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        type: 'asset',
       },
 
       // Add your rules for custom modules here
@@ -38,9 +38,9 @@ const config = {
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = "production";
+    config.mode = 'production';
   } else {
-    config.mode = "development";
+    config.mode = 'development';
   }
   return config;
 };

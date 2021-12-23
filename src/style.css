@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Arbutus';
+  src: url('./Arbutus-Regular.ttf');
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 20px;
+  background-color: lightcyan;
+}
+
+.display {
+  background: lightcyan;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+}
+
+.display div {
+  margin-top: 20px;
+}
+
+#title {
+  font-family: 'Arbutus';
+  font-size: 50px;
+}
+
+#turn {
+  font-size: 30px;
+}
+
+#winner {
+  font-size: 30px;
+  color: red;
+}
+
+.gameboard {
+  display: grid;
+  padding: 2px;
+  background-color: black;
+  grid-template: repeat(10, 50px) / repeat(10, 50px);
+  grid-gap: 2px;
+}
+
+.grid {
+  background-color: white;
+}
+
+.grid:hover {
+  background-color: lightcyan;
+  cursor: pointer;
+}
+
+.grid:active {
+  background-color: lightskyblue;
+}
