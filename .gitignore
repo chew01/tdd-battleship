@@ -125,8 +125,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-#linter and vscode settings
-.vscode
-.babelrc
-.eslintrc.json
