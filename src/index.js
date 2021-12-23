@@ -149,5 +149,6 @@ game.Player2.placeShip(2, 2, 2, 'vertical');
 
 displayFirstGameboard(game);
 displaySecondGameboard(game);
+displayTurn('player1');
 
 export { Ship, Gameboard, Player };
