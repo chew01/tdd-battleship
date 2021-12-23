@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'BungeeShade';
-  src: url('./BungeeShade-Regular.ttf');
+  src: url('./assets/BungeeShade-Regular.ttf');
   font-style: normal;
 }
 @font-face {
   font-family: 'FredokaOne';
-  src: url('./FredokaOne-Regular.ttf');
+  src: url('./assets/FredokaOne-Regular.ttf');
   font-style: normal;
 }
 
@@ -70,4 +70,61 @@ body {
   text-align: center;
   font-size: 30px;
   font-family: 'FredokaOne';
+}
+
+img {
+  z-index: 1;
+  position: absolute;
+}
+
+#battleship,
+#carrier,
+#destroyer,
+#submarine,
+#patrol {
+  z-index: 1;
+  position: absolute;
+  background-color: lightgray;
+}
+
+#battleship {
+  width: 206px;
+  height: 50px;
+}
+
+#battleship[data-orientation='vertical'] {
+  height: 206px;
+  width: 50px;
+}
+
+#carrier {
+  width: 258px;
+  height: 50px;
+}
+
+#carrier[data-orientation='vertical'] {
+  height: 258px;
+  width: 50px;
+}
+
+#destroyer,
+#submarine {
+  width: 154px;
+  height: 50px;
+}
+
+#destroyer[data-orientation='vertical'],
+#submarine[data-orientation='vertical'] {
+  height: 154px;
+  width: 50px;
+}
+
+#patrol {
+  width: 102px;
+  height: 50px;
+}
+
+#patrol[data-orientation='vertical'] {
+  height: 102px;
+  width: 50px;
 }

@@ -1,8 +1,9 @@
 import {
-  displayFirstGameboard,
-  displaySecondGameboard,
+  displayFirstPlanboard,
+  displaySecondPlanboard,
   displayTurn,
   displayWinner,
+  displaySubmitPlanButton,
   updateBoard,
 } from './gui';
 import './style.css';
@@ -144,11 +145,10 @@ const Player = () => {
 };
 
 const game = Player();
-game.Player1.placeShip(1, 1, 1, 'horizontal');
-game.Player2.placeShip(2, 2, 2, 'vertical');
 
-displayFirstGameboard(game);
-displaySecondGameboard(game);
-displayTurn('player1');
+// planning phase
+displayFirstPlanboard();
+displaySecondPlanboard();
+displaySubmitPlanButton();
 
 export { Ship, Gameboard, Player };
